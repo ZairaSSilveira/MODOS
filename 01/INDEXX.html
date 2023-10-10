@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LENTEVIVA</title>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <!-- ... outros meta tags e links ... -->
+        <link rel="stylesheet" href="tema-escuro.css" id="tema-estilos">
+    </head>
+</head>
+
+<body>
+    <div class="container">
+        <p class="ti">LENTE<span class="verde">VIVA</span></p>
+        <header>
+            <nav>
+                <a href="#">Serviços</a>
+                <a href="#">Blog</a>
+                <a href="#">contato</a>
+                <div class="icone-modos">
+                    <label class="switch">
+                        <input type="checkbox" id="modo-noturno">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </nav>
+        </header>
+        <!-- fim header -->
+        <div class="roxo">
+
+            <p class="trans">TRANSFORMANDO MOMENTOS EM MEMÓRIAS ETERNAS.</p>
+            <img class="homem" src="/02/HOMEM.png" alt="homem">
+
+        </div>
+    </div>
+    <!-- inicio serviços -->
+    <div class="td">
+        <p class="ser">NOSSOS<span class="negrito">SERVIÇO </span></p>
+        <div class="tudo">
+            <div class="01">
+                <img src="/02/01.png" alt="">
+                <p class="ensaio">ENSAIOFOTOGRAFICOS</p>
+                <img src="/02/04.png" alt="">
+            </div>
+            <div class="02">
+                <img src="/02/02.png" alt="">
+                <p class="ensaio">FOTOGRAFIAAMBIENTAL</p>
+                <img src="/02/05.png" alt="">
+            </div>
+            <div class="03">
+                <img src="/02/03.png" alt="">
+                <p class="ensaio">ENSAIOPROFISIONAL</p>
+                <img src="/02/06.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- fim dos serviços -->
+
+    <div class="parte-foto">
+        <p class="nosso-blog">NOSSO<span class="negrito">BLOG</span></p>
+        <img class="camera" src="/02/camera.png" alt="">
+    </div>
+    <!-- fim blog -->
+
+    <!-- começo contato -->
+    <div class="contato">
+        <div class="cont">
+            <p class="contato">CONTATE-NOS</p>
+            <label for="text">Nome:</label>
+            <input type="text" id="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="text">Telefone:</label>
+            <input type="text" id="tel" required>
+            <label for="msg">Mensagem:</label>
+            <textarea id="msg" required></textarea>
+            <button>Enviar</button>
+        </div>
+        <div class="imgimg">
+            <img class="bolsa" src="/02/BOLSA.png" alt="bolsa">
+        </div>
+    </div>
+    <!-- fim contato  -->
+    <!-- inicio rodapé -->
+    <footer>
+        <div class="rodape">
+            <a href="#">Serviços</a>
+            <a href="#">Blog</a>
+            <a href="#">contato</a>
+            <p class="lenteviva-final">LENTE<span class="verde">VIVA</span></p>
+        </div>
+
+    </footer>
+    <!-- fim do rodape-->
+    <script>
+        const botaoModo = document.getElementById('modo-noturno');
+        const body = document.body;
+        const linkEstilos = document.getElementById('tema-estilos');
+    
+        botaoModo.addEventListener('change', () => {
+            if (botaoModo.checked) {
+                body.classList.add('tema-escuro');
+                linkEstilos.href = 'tema-escuro.css';
+            } else {
+                
+                body.classList.remove('tema-escuro');
+    
+                linkEstilos.href = 'tema-claro.css';
+            }
+        });
+        
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+    
+   
+    const btnEnviar = document.querySelector('.contato button');
+    
+        btnEnviar.addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            
+           
+    const telefone = document.getElementById('tel').value;
+            
+           
+    const mensagem = document.getElementById('msg').value;
+    
+            
+    
+           
+    // Exibe os valores no console
+            console.log("Nome:", nome);
+            console.log("Email:", email);
+            console.log("Telefone:", telefone);
+            console.log("Mensagem:", mensagem);
+        });
+    });
+        
+    
+    </script>
+    
+</body>
+
+</html>
